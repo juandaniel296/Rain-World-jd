@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+}
+header{
+    background-color: rgb(60, 60, 61);
+    padding: 10px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+header a{
+    
+    justify-content: center;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    margin:0 10px;
+}
+
+main{
+    color: rgb(125, 166, 202);
+    font-size:30px ;
+    margin: 30px 100px;
+    background-color: black;
+    border-radius: 20px;
+    padding: 40px;
+    min-height: calc(100vh - 92px - 80px - 100px);
+
+}

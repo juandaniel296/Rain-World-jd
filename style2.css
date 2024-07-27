@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+}
+header{
+    background-color: rgb(60, 60, 61);
+    padding: 10px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+body{
+    background: url('imagenes/img11.png') no-repeat center center  fixed;
+    background-size: cover;
+}
+main{
+    color: rgb(125, 166, 202);
+    font-size:30px ;
+    margin: 30px 100px;
+    background-color: black;
+    border-radius: 20px;
+    padding: 40px;
+    min-height: calc(100vh - 92px - 80px - 100px);
+
+}
+header a{
+    
+    justify-content: center;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    margin:0 10px;
+}
+
+.an1 > * {
+    padding: 130px;
+    display: inline-block;
+    width: 500px;
+    vertical-align: middle;
+   
+}
+.an2 > * {
+    padding: 130px;
+    display: inline-block;
+    width: 500px;
+    vertical-align: middle;
+   
+}
+.tododi{
+    display: flex;
+    flex-wrap: wrap;
+    align-content:start;
+    justify-content: center;
+    
+
+}
+.an3 > * {
+    padding: 130px;
+    display: inline-block;
+    width: 500px;
+    vertical-align: middle;
+   
+}
+
+.buitres {
+    display: flex;
+    justify-content: space-between;
+}
+
+.buitre, .buitre-real {
+    flex: 1;
+    margin: 20px  ;
+}
+
+.buitre h2, .buitre-real h2 {
+    text-align: center;
+}
+
+.buitre img, .buitre-real img {
+    display: block;
+    margin: 10px auto;
+    max-width: 100%;
+}
+.cien ,.Arañas {
+    display: flex;
+    justify-content: space-between;
+}
+
+.c1, .c2  {
+    flex: 1;
+    margin: 20px  ;
+}
+
+.c1 h2,  .c2 h2  {
+    text-align: center;
+}
+
+.c1 img, .c2 img  {
+    display: inline;
+    margin: 10px auto;
+    max-width: 100%;
+    padding-left: 100px;
+  
+}
+.s1, .s2 {
+    flex: 1;
+    margin: 20px  ;
+}
+
+.s1 h2, .s2 h2 {
+    text-align: center;
+}
+
+.s1 img, .s2 img {
+    display: block;
+    margin: 10px auto;
+    max-width: 100%;
+ 
+  
+}
+.A1, .A2 ,.A3  {
+    flex: 1;
+    margin: 20px  ;
+}
+
+.A1 h2,  .A2 h2 ,.A3  {
+    text-align: center;
+}
+
+.A1 img, .A2 img ,.A3  {
+    display: inline;
+    margin: 10px auto;
+    max-width: 100%;
+    padding-left: 70px;
+   
+  
+}
+.n1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 20px;
+}
+
+.n1 img {
+    margin: 10px 0;
+    max-width: 100%;
+}
+
+
+.salto {
+    width:20px;
+}
+.hola1{
+    display:block ;
+}
+
