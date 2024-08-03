@@ -205,43 +205,6 @@ nav a:hover{
     width: 500px;
     vertical-align: middle;
 }
-
-   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #inf4 {
     background-color: black;
     color: white;
@@ -265,6 +228,6 @@ nav a:hover{
 }
 
 .inf4-images nav a {
-    margin: 0 120px;
-    padding-right: 10px;
+    margin: 0 160px;
+    padding-right: 60px;
 }
