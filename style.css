@@ -19,11 +19,14 @@ header{
     background-color: black;
     background-image : url(imagenes/fondo1.jpg)  ;
     background-size: contain;
+    max-width: 100%;
+    height: auto;
  
 }
 
 .hola23{
-    height: 400px;
+    height: 50%;
+    width: 50%;
     animation: anim1 4s 1 backwards  ;
     animation-timing-function: ease-in ;
     
@@ -57,17 +60,13 @@ header{
         
     }
 }
-#inf1  {
-    
-    position: absolute;
-    align-items:stretch ;
-    justify-content:center;
-    left: 480px;
-    top: 60px;
-
-    
-    
-    
+#inf1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;    
+    max-width: 100%;
+    height: auto;
 }
 
 
@@ -88,41 +87,36 @@ header a{
 }
 .a {
     color: rgb(151, 148, 148);
-    font-size: 40px;
-    
+    font-size: 40px; 
 }
 .salto {
-    height: 700px;
-   
+    height: 600px;
 }
 .salto2 {
     height: 300px;
 }
 .texto1{
-    
-    padding-left: 80px;
-    
-    
-
     font-family: 'Inter';
     font-style: normal;
     font-weight: 1000;
     font-size: 30px;
-    
     color: #5B5858;
-
     backdrop-filter: blur(2px);
-
-
+    text-align: center;
 }
-
 .inf2  {
-    background-color: black;
+    background-color: rgb(19, 19, 19);
     color: rgb(253, 253, 253);
     text-align: center;
     padding: 10px 5%;
+    max-width: 100%;
+    height: auto;
 }
-
+.imagenslug1 {
+    width: 100%; 
+    max-width: 600px; 
+    height: auto; 
+}
 .inf2 > * {
     display: inline-block;
     width: 350px;
@@ -132,27 +126,24 @@ header a{
 nav a:hover{
     color:rgb(0, 67, 94);
 }
-#inf3 {
-    
+#inf3{
     background-image: url(imagenes/fondo.png) ;
     background-repeat: no-repeat;
     animation: anim4 3 6s forwards;
     animation-play-state: paused;
-    background-size: 1500px 500px;
-    margin-left: 200px;
+    background-size: 100% ;
+    margin: 200px;
     color: rgb(253, 253, 253);
     text-align: center;
     padding: 150px ;
-}
-
-#inf3 > * {
-    width: 350px;
+    max-width: 100%;
+    height: auto;
     font-size: 30px;
 }
-#inf3{
+#inf3:hover{
     animation-play-state: paused;
 }
-#inf3:not(:hover){
+#inf3{
     animation: anim4 3 6s forwards;
     animation-play-state: paused;
     border: double 20px #e70202;
@@ -161,6 +152,7 @@ nav a:hover{
     animation-delay: 5s;
     animation-direction: alternate;
     animation-timing-function:ease-out;
+
 }
 @keyframes anim4 {
     0% {
@@ -173,49 +165,77 @@ nav a:hover{
         transform:  translate(-50px,-100px);
     }
     100% {
-        border: double 20px #d3f800;
+        border: double 20px #9fb0c7;
         transform: translate(0px);
-        background-color: rgb(187, 255, 0);
+        background-color: rgb(200, 214, 235);
     }
 }
-
-
-
-
-
-
-#main2{
-
-    background: url('imagenes/fondo1.1.png') no-repeat center center ;
-    background-size: cover;
-    padding: 20% 30%;
+#main2 {
+    position: relative; /* Necesario para posicionar los fondos absolutos */
+    padding: 10%;
     border-radius: 20px;
-    
+    overflow: hidden; /* Asegura que el contenido no sobresalga del contenedor */
 }
-.main21{
+
+/* Estilo para cada fondo */
+.background {
+    position: absolute; /* Posiciona los fondos dentro de #main2 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1; /* Coloca los fondos detrás del contenido */
+}
+
+.background1 {
+    background-image: url('imagenes/fondo1.1.png'); /* Primer fondo */
+    height: 100%; /* Altura del primer fondo */
+}
+
+.background2 {
+    background-image: url('imagenes/image41.png'); /* Segundo fondo */
+    height: 33.33%; /* Altura del segundo fondo */
+    top: 33.33%; /* Posiciona el segundo fondo debajo del primero */
+}
+
+.background3 {
+    background-image: url('imagenes/image\ 5.png'); /* Tercer fondo */
+    height: 33.33%; /* Altura del tercer fondo */
+    top: 66.66%; /* Posiciona el tercer fondo debajo del segundo */
+}
+
+.main21 {
     color: rgb(125, 166, 202);
-    font-size:30px ;
-    margin: -250px -200px;
+    font-size: 30px;
     background-color: black;
     border-radius: 20px;
     padding: 50px;
     min-height: calc(100vh - 92px - 80px - 100px);
-    
-    
 }
 
-.art1 > * {
-    display: inline-block;
-    width: 500px;
-    vertical-align: middle;
-   
+
+.art1 {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    gap: 20px; 
+    max-width: 100%; 
+    padding: 10px; 
 }
-.hi2{
-    display: block;
+
+.art1 img {
+    max-width: 50%; 
+    height: auto; 
+}
+
+.art1 div {
+    font-size: 20px; 
+    line-height: 1.5; 
 }
 .video1{
-   
-    display: block;
+    max-width: 100%;
 }
 .gif21{
     display: block
@@ -224,6 +244,7 @@ nav a:hover{
     display: flex;
     flex-direction:column;
     align-items: center;
+
 }
 #main3{
 
@@ -242,25 +263,31 @@ nav a:hover{
     background-color: black;
     border-radius: 20px;
     padding: 50px;
+    padding-bottom: 100000px;
     min-height: calc(100vh - 92px - 80px - 100px);
     
     
 }
 
-.art2 > * {
-    display: inline-block;
-    width: 500px;
-    vertical-align: middle;
-   
+.art2 {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    gap: 20px; 
+    max-width: 100%; 
+    padding: 10px; 
 }
-#main4{
 
-    background: url('imagenes/image\ 5.png') no-repeat center center ;
-    background-size: cover;
-    padding: 20% 30%;
-    border-radius: 20px;
-    
+.art2 img {
+    max-width: 50%; 
+    height: auto; 
 }
+
+.art2 div {
+    font-size: 20px; 
+    line-height: 1.5; 
+}
+
 .main23{
     color: rgb(125, 166, 202);
     font-size:30px ;
@@ -269,14 +296,25 @@ nav a:hover{
     border-radius: 20px;
     padding: 50px;
     min-height: calc(100vh - 92px - 80px - 100px);
-    
-    
 }
 
-.art3 > * {
-    display: inline-block;
-    width: 500px;
-    vertical-align: middle;
+.art3 {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    gap: 20px; 
+    max-width: 100%; 
+    padding: 10px; 
+}
+
+.art3 img {
+    max-width: 100%; 
+    height: 100%; 
+}
+
+.art3 div {
+    font-size: 20px; 
+    line-height: 1.5; 
 }
 #inf4 {
     background-color: black;
@@ -288,22 +326,26 @@ nav a:hover{
 .inf4-text {
     font-size: 20px;
     font-family: 'Inter';
-    color:rgba(26, 109, 148, 0.514);
+    color: rgba(26, 109, 148, 0.514);
     display: flex;
     justify-content: space-evenly;
     margin-bottom: 20px;
-    padding-right: 40px;
+    padding-right: 50px;
 }
 
 .inf4-images {
-    display: flex;
-    justify-content: space-evenly;
+    display: flex; /* Utiliza flexbox para alinear las imágenes en una fila */
+    justify-content: center; /* Centra las imágenes horizontalmente */
+    align-items: center; /* Alinea las imágenes verticalmente */
+    gap: 40px; /* Ajusta el espacio entre las imágenes */
 }
 
-.inf4-images nav a {
-    margin: 0 160px;
-    padding-right: 60px;
+.inf4-images img {
+    height: 100px; /* Ajusta la altura de las imágenes */
+    width: 100px; /* Ajusta el ancho de las imágenes */
 }
+
+
 .inf4-images:hover{
     animation: anim3 1.5s infinite backwards;
     animation-direction: alternate;
