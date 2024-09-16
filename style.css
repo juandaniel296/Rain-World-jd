@@ -25,13 +25,14 @@ header{
 }
 
 .hola23{
-    height: 50%;
+    height: auto;
     width: 50%;
+    object-fit: contain;
     animation: anim1 4s 1 backwards  ;
     animation-timing-function: ease-in ;
-    
-    
+   
 }
+
 @keyframes anim1 {
     0%{
         
@@ -110,12 +111,15 @@ header a{
     text-align: center;
     padding: 10px 5%;
     max-width: 100%;
-    height: auto;
 }
 .imagenslug1 {
-    width: 100%; 
-    max-width: 600px; 
-    height: auto; 
+    width: 100%; /* Hace que la imagen ocupe todo el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    max-width: 600px; /* Limita el tamaño máximo para que no sea demasiado grande */
+    display: block; /* Centra la imagen dentro del contenedor */
+    margin-left: auto; 
+    margin-right: auto; 
+    object-fit: contain; 
 }
 .inf2 > * {
     display: inline-block;
@@ -238,7 +242,13 @@ nav a:hover{
     max-width: 100%;
 }
 .gif21{
-    display: block
+    width: 100%; /* Hace que la imagen ocupe todo el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    max-width: 600px; /* Limita el tamaño máximo para que no sea demasiado grande */
+    display: block; /* Centra la imagen dentro del contenedor */
+    margin-left: auto; 
+    margin-right: auto; 
+    object-fit: contain; 
 }
 .R1{
     display: flex;
@@ -279,8 +289,13 @@ nav a:hover{
 }
 
 .art2 img {
-    max-width: 50%; 
-    height: auto; 
+    width: 100%; /* Hace que la imagen ocupe todo el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    max-width: 600px; /* Limita el tamaño máximo para que no sea demasiado grande */
+    display: block; /* Centra la imagen dentro del contenedor */
+    margin-left: auto; 
+    margin-right: auto; 
+    object-fit: contain; 
 }
 
 .art2 div {
@@ -308,8 +323,13 @@ nav a:hover{
 }
 
 .art3 img {
-    max-width: 100%; 
-    height: 100%; 
+    width: 100%; /* Hace que la imagen ocupe todo el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    max-width: 600px; /* Limita el tamaño máximo para que no sea demasiado grande */
+    display: block; /* Centra la imagen dentro del contenedor */
+    margin-left: auto; 
+    margin-right: auto; 
+    object-fit: cover; 
 }
 
 .art3 div {
@@ -362,5 +382,48 @@ nav a:hover{
     100%{
         transform: translate(0px) ;
         
+    }
+}
+
+/* Ajustes para tabletas en vertical y horizontal */
+@media (min-width: 768px) and (max-width: 991px) {
+    .imagenslug1 {
+        width: 80%;  /* Limitar el tamaño en tabletas para que no ocupe todo el ancho */
+        max-width: 500px;  /* Ajustar el máximo ancho en tabletas */
+    }
+
+    .art1 img, .art2 img, .art3 img {
+        width: 80%;  /* Ajustar el ancho de las imágenes en tabletas */
+    }
+
+    .texto1 {
+        font-size: 24px; /* Ajustar el tamaño del texto para pantallas de tableta */
+    }
+}
+/* Ajuste para pantallas pequeñas como smartphones en vertical */
+@media (max-width: 767px) {
+    #main2 {
+        padding: 5%;  /* Reducir el padding en pantallas pequeñas */
+    }
+    
+    .art1, .art2, .art3 {
+        flex-direction: column;  /* Apilar los elementos en lugar de alinearlos horizontalmente */
+        gap: 10px;  /* Reducir el espacio entre los elementos */
+    }
+
+    .texto1 {
+        font-size: 20px; /* Ajustar el tamaño del texto para pantallas más pequeñas */
+    }
+}
+
+/* Smartphones en vertical */
+@media (max-width: 480px) {
+    .imagenslug1 {
+        width: 100%;  /* Ocupar todo el ancho del contenedor */
+        max-width: 100%;  /* No limitar el tamaño máximo en móviles */
+    }
+
+    .art1 img, .art2 img, .art3 img {
+        width: 100%;  /* Hacer que las imágenes en estas secciones ocupen todo el ancho disponible */
     }
 }
